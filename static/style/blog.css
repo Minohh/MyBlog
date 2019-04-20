@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://fonts.googleapis.com/css?family=Cuprum');
+}
+
+.spfont {
+	font-family: 'Cuprum', sans-serif;
+	font-size: 40px;
+}
