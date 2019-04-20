@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     {% if title %}
-        <title>Minohh Blog - {{ title }}</title>
+      <title>Minohh Blog - {{ title }}</title>
     {% else %}
-        <title>Minohh Blog</title>
+      <title>Minohh Blog</title>
     {% endif %}
     
     <!-- Required meta tags -->
@@ -16,63 +16,60 @@
 
     <!-- Bootstrap core CSS -->
     <!--link href="bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet"-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 
     <!-- custom style sheet -->
     <link type="text/css" href="{{ url_for('static', filename='style/blog.css') }}" rel="stylesheet">
-
-
-</head>
-<body>
-	<div class="container">
-		<nav class="navbar navbar-default navbar-expand-lg navbar-light" role="navigation">
-			<a class="navbar-brand pb-0 spfont" href="#">Minohh</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-    			<span class="navbar-toggler-icon"></span>
-  			</button>
-			<div class="collapse navbar-collapse" id="navbarContent">
-				<ul class="navbar-nav mr-auto btn-group">
-					<li class="nav-item btn btn-outline-secondary">
-			    		<a class="nav-link" href="/">Home</a>
-				    </li>
-				    <li class="nav-item btn btn-outline-secondary">
-					    <a class="nav-link" href="/about">About</a>
-			    	</li>
-				    <li class="nav-item btn btn-outline-secondary">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-				    <li class="nav-item btn btn-outline-secondary">
-            			<a class="nav-link" href="#">Sign up</a>
-					</li>
-				    <li class="nav-item btn btn-outline-secondary dropdown">
-            			<a class="nav-link dropdown-toggle" href="#" id="categories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Article Categories</a>
-            			<div class="dropdown-menu btn btn-outline-secondary" aria-labelledby="categories">
-          					<a class="dropdown-item" href="#">Action</a>
-          					<a class="dropdown-item" href="#">Another action</a>
-          				</div>
-					</li>
-          		</ul>
-				
-				<div class="justify-content-end">
-					<div class="input-group">
-  						<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-  						<div class="input-group-append">
-    						<button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-  						</div>
-          			</div>
-          		</div>
-          	</div>
-		</nav>
-	</div>
+  
+  </head>
+  <body>
     <div class="container">
+	  <nav class="navbar navbar-default navbar-expand-lg navbar-light" role="navigation">
+		<a class="navbar-brand pb-0 spfont" href="#">Minohh</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		  </button>
+		  <div class="collapse navbar-collapse" id="navbarContent">
+	  		<ul class="navbar-nav mr-auto btn-group">
+              <li class="nav-item btn btn-outline-secondary">
+			    <a class="nav-link" href="/">Home</a>
+			  </li>
+			  <li class="nav-item btn btn-outline-secondary">
+			    <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item btn btn-outline-secondary">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item btn btn-outline-secondary">
+                <a class="nav-link" href="#">Sign up</a>
+              </li>
+              <li class="nav-item btn btn-outline-secondary dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="categories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Article Categories</a>
+                <div class="dropdown-menu btn btn-outline-secondary" aria-labelledby="categories">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </div>
+              </li>
+            </ul>
 
+            <div class="justify-content-end">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </nav>
+    </div>
+    <div class="container">
       <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
         <div class="col-md-11 px-0">
-            <img src="{{ url_for('static', filename='images/logo.jpg') }}" class="mr-3" alt="Shoebill" align="left">
+          <img src="{{ url_for('static', filename='images/logo.jpg') }}" class="mr-3" alt="Shoebill" align="left">
           <h1 class="display-4 font-italic">Focus on video-relative technology.</h1>
-
         </div>
       </div>
 
@@ -86,5 +83,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-</body>
+  </body>
 </html>
